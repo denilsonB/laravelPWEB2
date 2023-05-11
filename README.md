@@ -51,4 +51,6 @@ python3 manage.py test users
 
 ## Diagrama do banco de dados
 Segue o diagrama entidade-relacionamento do banco:
+```
 <img src="diagrama_pet_amigo.png" width="400" height="250" />
+```

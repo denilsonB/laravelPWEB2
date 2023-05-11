@@ -28,3 +28,23 @@ O "--settings=petamigo.settings.development" é necessario para rodar o comando 
 ```
 python3 manage.py runserver --settings=petamigo.settings.development
 ```
+
+## Estrutura de pastas
+A estrutura de pastas do projeto segue o padrão do Django, inicialmente existe a pasta com o nome do projeto(no nosso caso petamigo) que vai guardar as configurações inciais. Cada modulo novo criado vai ser adicionado ao arquivo settings.py em INSTALLED_APPS bem como outras configurações que forem necessarias
+
+Para criar um modulo novo usamos o comando
+```
+python3 manage.py startapp nome_do_modulo
+```
+será criado uma nova pasta com os arquivos iniciais do Django, no nosso projeto temos os modulos de users,pets e chats. Cada um deles vai ter seu arquivo models.py descrevendo os campos presentes no modelo e suas funções,serializer.py que é usado para permitir que sejam feitas queries nos modelos, views.py que vai tratar as requisições e urls.py que vai definir as rotas referentes aquele modulo.
+
+## Testes
+
+Também em cada modulo, existe o arquivo tests.py em que está escrito testes unitarios do modulo, pode ser de grande ajuda para entender os formatos de requisição para aplicação, para rodar os testes use:
+```
+python3 manage.py test nome_do_modulo
+```
+por exemplo
+```
+python3 manage.py test users
+```
